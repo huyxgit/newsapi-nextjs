@@ -6,10 +6,20 @@
 }
 
 .post {
-    width: 500px;
+    width: 50%;
+    opacity: .8;
     margin-bottom: 25px;
     padding-bottom: 25px;
-    border-bottom: 1px solid black;
+    transition: opacity .3s ease;
+}
+
+.postTitle:hover {
+    color: #a52a2a;
+}
+
+.post:hover {
+    opacity: 1;
+
 }
 
 .post img {
@@ -17,9 +27,9 @@
 }
 
 .post h1 {
-    font-size: 16px;
+    font-size: 25px;
     cursor: pointer;
-    text-align: center;
+    text-align: left;
 }
 
 .paginator {
@@ -39,4 +49,11 @@
 .paginator .disabled {
     cursor: not-allowed;
     color: rgb(179, 179, 179);
+}
+
+@media (max-width: 800px) {
+    .post {
+        
+        width: 90%;
+    }
 }

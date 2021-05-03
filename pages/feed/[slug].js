@@ -13,9 +13,9 @@ export default function Feed({ pageNumber, articles }) {
                 {
                     articles.map((article, index) => (
                         <div key={index} className={styles.post}>
-                            <h1 onClick={() => (window.location.href = article.url)}>{article.title}</h1>
+                            <h1 className={styles.postTitle} onClick={() => (window.location.href = article.url)}>{article.title}</h1>
                             <p>{article.description}</p>
-                            {!!article.urlToImage && <img src={article.urlToImage} />}
+                            {!!article.urlToImage && <a href={article.url}><img src={article.urlToImage} /></a>}
                         </div>
                     ))
                 }
@@ -27,10 +27,10 @@ export default function Feed({ pageNumber, articles }) {
                         router.push(`/feed/${pageNumber - 1}`).then(() => window.scrollTo(0, 0))
                     }
                 }} className={pageNumber === 1 ? styles.disabled : styles.active}>
-                    Previous
+                    Prev
                 </div>
 
-                <div>#{pageNumber}</div>
+                <div>{pageNumber}</div>
 
                 <div onClick={() => {
                     if (pageNumber < 5) {

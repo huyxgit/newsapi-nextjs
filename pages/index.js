@@ -1,4 +1,4 @@
-import Toolbar from '../components/toolbar'
+import Toolbar from '../components/Nav'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {

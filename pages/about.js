@@ -1,5 +1,5 @@
 import styles from '../styles/EOM.module.css'
-import Toolbar from '../components/toolbar'
+import Toolbar from '../components/Nav'
 
 export default function About({ employee }) {
     console.log(employee)

@@ -1,6 +1,6 @@
 import styles from '../../styles/Feed.module.css'
 import { useRouter } from 'next/router'
-import Toolbar from '../../components/toolbar'
+import Toolbar from '../../components/Nav'
 
 
 export default function Feed({ pageNumber, articles }) {
@@ -13,8 +13,9 @@ export default function Feed({ pageNumber, articles }) {
                 {
                     articles.map((article, index) => (
                         <div key={index} className={styles.post}>
-                            {!!article.urlToImage && (<><h1 className={styles.postTitle} onClick={() => (window.location.href = article.url)}>{article.title}</h1>
-                                <p>{article.description}</p> <a href={article.url}><img src={article.urlToImage} /></a></>)}
+                            <h1 className={styles.postTitle} onClick={() => (window.location.href = article.url)}>{article.title}</h1>
+                            <p>{article.description}</p>
+                            {!!article.urlToImage && <a href={article.url}><img src={article.urlToImage} /></a>}
                         </div>
                     ))
                 }

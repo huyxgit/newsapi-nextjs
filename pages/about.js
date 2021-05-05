@@ -1,4 +1,4 @@
-import styles from '../styles/EOM.module.css'
+import styles from '../styles/About.module.css'
 import Toolbar from '../components/Nav'
 
 export default function About({ employee }) {

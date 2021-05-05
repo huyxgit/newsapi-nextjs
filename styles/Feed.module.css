@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 100px;
+    background: #fbfbfd;
 }
 
 .post {
@@ -38,19 +39,23 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    background: rgb(36, 36, 36);
 }
 
 .paginator div {
-    margin: 25px;
+    margin: 28px;
+    color: #fbfbfd;
 }
 
 .paginator .active {
     cursor: pointer;
+    color: #fbfbfd;
+
 }
 
 .paginator .disabled {
     cursor: not-allowed;
-    color: rgb(179, 179, 179);
+    color: rgb(128, 128, 128);
 }
 
 @media (max-width: 800px) {

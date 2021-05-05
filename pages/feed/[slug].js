@@ -2,7 +2,6 @@ import styles from '../../styles/Feed.module.css'
 import { useRouter } from 'next/router'
 import Toolbar from '../../components/Nav'
 
-
 export default function Feed({ pageNumber, articles }) {
     const router = useRouter()
 
@@ -39,11 +38,7 @@ export default function Feed({ pageNumber, articles }) {
                 }} className={pageNumber === 5 ? styles.disabled : styles.active}>
                     Next
                 </div>
-
-
-
             </div>
-
         </div>
     )
 }
@@ -67,7 +62,6 @@ export const getServerSideProps = async ctx => {
     })
 
     const data = await res.json()
-
     const { articles } = data
 
     return {
@@ -76,6 +70,4 @@ export const getServerSideProps = async ctx => {
             pageNumber: Number.parseInt(pageNumber)
         }
     }
-
-
 }

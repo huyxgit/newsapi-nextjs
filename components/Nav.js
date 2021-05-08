@@ -3,7 +3,6 @@ import styles from '../styles/Nav.module.css'
 
 export default function Toolbar() {
     const router = useRouter()
-    
     return (
         <div className={styles.main}>
             <div onClick={() => router.push('/feed/1')}>Feed</div>
